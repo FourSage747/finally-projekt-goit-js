@@ -9,6 +9,7 @@ const keywordUrl = 'https://api.themoviedb.org/3/search/movie';
 let currentPage = 1;
 let searchKeyword = '';
 
+localStorage.clear();
 form.addEventListener('submit', (evt) => {
   evt.preventDefault();
   searchKeyword = form.elements.searchQuery.value;
