@@ -1,0 +1,265 @@
+.close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: 250ms ease;
+}
+
+.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.modal_window {
+  position: absolute;
+  overflow: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  height: 500px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.modal_wd {
+  padding: 48px 20px 20px;
+
+  img {
+    width: 240px;
+    height: 357px;
+    border-radius: 10px;
+  }
+
+  h1 {
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 20px 0;
+  }
+
+  span {
+    display: block;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin: 20px 0 8px;
+  }
+
+  p {
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  button {
+    display: block;
+    width: 110px;
+    height: 44px;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: #ff6b01;
+    color: white;
+    border: 0;
+    margin: 20px auto;
+    transition: 250ms ease;
+  }
+
+  .active {
+    background-color: transparent;
+    color: black;
+    border: 2px solid black;
+  }
+}
+
+.modal_wd2 {
+  display: flex;
+  gap: 40px;
+
+  ul:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    li {
+      color: #8c8c8c;
+      font-family: Roboto;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 16px;
+    }
+  }
+  ul:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    li {
+      font-family: Roboto;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 16px;
+    }
+  }
+}
+
+
+@media screen and (min-width: 480px) {
+  .modal_window {
+    width: 380px;
+    height: 500px;
+  }
+
+  .modal_wd {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      text-align: center;
+    }
+
+    span {
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  .modal_wd2 {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal_window {
+    width: 700px;
+    height: 552px;
+  }
+
+  .modal_wd1 {
+    width: 264px;
+  }
+
+  .modal_wd {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: center;
+    gap: 68px;
+
+    img {
+      width: 264px;
+      height: 374px;
+      flex-shrink: 0;
+    }
+
+    h1 {
+      text-align: start;
+      margin-top: 0;
+    }
+
+    span {
+      text-align: start;
+    }
+
+    p {
+      text-align: start;
+    }
+
+    button {
+      width: 130px;
+      height: 44px;
+      margin: 20px 0;
+    }
+
+    iframe {
+      width: 500px;
+      height: 300px;
+    }
+  }
+
+  .modal_wd2 {
+    display: flex;
+    justify-content: start;
+    gap: 40px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .modal_window {
+    width: 826px;
+    height: 558px;
+  }
+
+  .modal_wd1 {
+    width: 375px;
+  }
+
+  .modal_wd {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+
+    img {
+      width: 375px;
+      height: 478px;
+    }
+
+    h1 {
+      font-size: 30px;
+    }
+
+    button {
+      width: 136px;
+      height: 44px;
+    }
+
+    iframe {
+      width: 700px;
+      height: 400px;
+      margin-top: 20px;
+    }
+  }
+
+  .modal_wd2 {
+    display: flex;
+    justify-content: start;
+    gap: 40px;
+  }
+}
